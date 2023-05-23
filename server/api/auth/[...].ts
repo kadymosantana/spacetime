@@ -5,6 +5,7 @@ import { prisma } from "@/server/lib/prisma";
 
 export default NuxtAuthHandler({
   pages: { signIn: "/" },
+  secret: process.env.NUXT_AUTH_SECRET,
   adapter: PrismaAdapter(prisma),
   providers: [
     // @ts-expect-error
