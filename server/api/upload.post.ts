@@ -2,9 +2,9 @@ import crypto from "node:crypto";
 import { v2 as cloudinary } from "cloudinary";
 
 cloudinary.config({
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SECRET
+  cloud_name: process.env.NUXT_CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.NUXT_CLOUDINARY_API_KEY,
+  api_secret: process.env.NUXT_CLOUDINARY_API_SECRET
 });
 
 export default defineEventHandler(async (event) => {
