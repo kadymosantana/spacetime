@@ -1,3 +1,11 @@
+<script setup lang="ts">
+const { status } = useAuth();
+
+const isAuthenticated = computed(() => {
+  return status.value === "authenticated" ? true : false;
+});
+</script>
+
 <template>
   <div class="grid w-screen grid-cols-1 bg-gray-900 text-gray-100 md:h-screen md:grid-cols-2">
     <!-- Left -->
@@ -18,7 +26,10 @@
     </div>
 
     <!-- Right -->
-    <div class="relative overflow-y-auto bg-[url('./bg-stars.svg')] p-8 md:p-16">
+    <div
+      :class="{ 'flex h-screen items-center justify-center': !isAuthenticated }"
+      class="relative overflow-y-auto bg-[url('./bg-stars.svg')] p-8 md:p-16"
+    >
       <!-- Stripes effect -->
       <div class="absolute bottom-0 left-0 top-0 w-2 bg-stripes md:hidden"></div>
 
