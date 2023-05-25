@@ -31,7 +31,7 @@ const isAuthenticated = computed(() => {
     <!-- Right -->
     <div
       :class="{ 'hidden items-center justify-center md:flex': !isAuthenticated }"
-      class="relative h-screen overflow-y-auto bg-[url('/bg-stars.svg')] p-8 md:p-16"
+      class="relative min-h-screen bg-[url('/bg-stars.svg')] p-8 md:h-screen md:overflow-y-auto md:p-16"
     >
       <!-- Stripes effect -->
       <div class="absolute bottom-0 left-0 top-0 w-2 bg-stripes md:hidden"></div>
