@@ -3,7 +3,7 @@ const { data: memories } = await useFetch("/api/memories");
 </script>
 
 <template>
-  <div v-if="!memories?.length" class="flex flex-1 items-center justify-center">
+  <div v-if="!memories?.length" class="flex h-full flex-1 items-center justify-center">
     <p class="text-center">
       Você ainda não registrou nenhuma lembrança, <br />
       comece a
