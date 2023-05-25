@@ -7,10 +7,13 @@ const isAuthenticated = computed(() => {
 </script>
 
 <template>
-  <div class="grid w-screen grid-cols-1 bg-gray-900 text-gray-100 md:h-screen md:grid-cols-2">
+  <div
+    :class="{ 'h-screen': !isAuthenticated }"
+    class="grid w-screen grid-cols-1 items-center justify-center bg-gray-900 text-gray-100 md:h-screen md:grid-cols-2"
+  >
     <!-- Left -->
     <div
-      class="relative flex flex-col justify-between gap-20 overflow-hidden border-r border-white/10 bg-[url('/bg-stars.svg')] bg-cover p-8 md:h-screen lg:px-28 lg:py-16"
+      class="relative flex h-screen flex-col items-center gap-20 overflow-hidden border-r border-white/10 bg-[url('/bg-stars.svg')] bg-cover p-8 md:items-start md:justify-between lg:px-28 lg:py-16"
     >
       <!-- Blur effect -->
       <div
@@ -27,8 +30,8 @@ const isAuthenticated = computed(() => {
 
     <!-- Right -->
     <div
-      :class="{ 'flex h-screen items-center justify-center': !isAuthenticated }"
-      class="relative overflow-y-auto bg-[url('/bg-stars.svg')] p-8 md:p-16"
+      :class="{ 'hidden items-center justify-center md:flex': !isAuthenticated }"
+      class="relative h-screen overflow-y-auto bg-[url('/bg-stars.svg')] p-8 md:p-16"
     >
       <!-- Stripes effect -->
       <div class="absolute bottom-0 left-0 top-0 w-2 bg-stripes md:hidden"></div>

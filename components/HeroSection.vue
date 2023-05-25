@@ -1,12 +1,12 @@
 <template>
-  <div class="space-y-6">
-    <NuxtImg src="./nlw-logo.svg" />
+  <div class="flex flex-col items-center space-y-6 md:block">
+    <NuxtImg src="./nlw-logo.svg" class="w-36 md:w-40" />
 
-    <div class="space-y-4 md:space-y-0">
-      <h1 class="text-4xl font-bold leading-snug text-gray-50 md:text-5xl lg:leading-relaxed">
+    <div class="space-y-4 text-center md:space-y-0 md:text-start">
+      <h1 class="text-3xl font-bold text-gray-50 md:text-5xl md:leading-snug lg:leading-relaxed">
         Sua cápsula do tempo
       </h1>
-      <p class="max-w-sm">
+      <p class="max-w-sm text-sm md:text-base">
         Colecione momentos marcantes da sua jornada e compartilhe (se quiser) com o mundo!
       </p>
     </div>

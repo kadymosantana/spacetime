@@ -15,12 +15,11 @@ const handleSignOut = async () => {
 </script>
 
 <template>
-  <div v-if="!isAuthenticated" class="flex gap-3">
+  <div v-if="!isAuthenticated" class="flex gap-3 text-sm md:text-base">
     <Icon
       name="solar:user-rounded-broken"
-      size="3rem"
       color="#2c2c31"
-      class="rounded-full bg-gray-200 p-3"
+      class="h-10 w-10 rounded-full bg-gray-200 p-2 md:h-12 md:w-12 md:p-3"
     />
 
     <div>
